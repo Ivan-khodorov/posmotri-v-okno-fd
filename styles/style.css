@@ -34,7 +34,7 @@ ol {
   align-items: center;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
@@ -94,9 +94,9 @@ ol {
   width: 225px;
   height: 27px;
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  font-family: Fira Sans Condensed;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -117,7 +117,6 @@ ol {
   border-right: 1px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
   padding-left: 1px;
-
 }
 
 .search-form__textfield:focus {
@@ -137,7 +136,7 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
@@ -154,7 +153,7 @@ ol {
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
-  border: 2px solid #000;
+  border: 2px solid #1B1919;
   outline: 1px solid #fff;
   outline-offset: -1px;
   background-color: #fff;
@@ -165,11 +164,6 @@ ol {
 .search-form__submit-button {
   align-self: end;
   width: 194px;
-}
-
-.result__video-container {
-  position: relative;
-  width: 711px;
 }
 
 @media (max-width: 768px) {
@@ -225,10 +219,13 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   margin-bottom: 10px;
   overflow-y: scroll;
   block-size: 298px;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
 }
 
 .content__list::-webkit-scrollbar{
@@ -261,16 +258,16 @@ ol {
   outline: 1px solid #fff;
 }
 
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 1px;
+}
+
 .content__video-card {
   display: flex;
   justify-content: start;
   align-items: start;
-}
-
-.content__video-card:hover {
-  text-decoration: underline;
-  text-decoration-color: #fff;
-  text-decoration-thickness: 1px;
 }
 
 .content__video-card-description-container {
@@ -280,10 +277,14 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
+  max-width: 196px;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   text-transform: uppercase;
   text-align: left;
   text-underline-position: from-font;
@@ -292,7 +293,7 @@ ol {
 
 .content__video-card-description {
   padding-top: 6px;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -311,13 +312,13 @@ ol {
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   width: 194px;
   padding-top: 6px ;
   padding-bottom: 6px;
   color: #fff;
   gap: 10px;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
