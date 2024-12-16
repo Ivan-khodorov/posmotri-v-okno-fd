@@ -27,7 +27,6 @@ ul,
 ol {
   list-style: none;
 }
-
 .page {
   display: flex;
   justify-content: center;
@@ -39,6 +38,8 @@ ol {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .visually-hidden {
@@ -52,9 +53,11 @@ ol {
 }
 
 .content {
-  display: flex;
-  align-items: end;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 711px 398px;
+  justify-content: center;
+  column-gap: 30px;
+  align-items: end;;
 }
 
 .result__video-container {
@@ -101,6 +104,7 @@ ol {
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
+  color: #fff;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   background-color: transparent;
@@ -164,25 +168,6 @@ ol {
 .search-form__submit-button {
   align-self: end;
   width: 194px;
-}
-
-@media (max-width: 768px) {
-  .page {
-    font-size: 16px;
-  }
-  .result__video-container {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .page {
-    font-size: 14px;
-  }
-  .content {
-    flex-direction: column;
-  }
 }
 
 .result__video {
@@ -257,7 +242,6 @@ ol {
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
-
 .content__card-link:hover {
   text-decoration: underline;
   text-decoration-color: #fff;
@@ -281,7 +265,7 @@ ol {
   max-width: 196px;
   font-weight: 700;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 32px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
